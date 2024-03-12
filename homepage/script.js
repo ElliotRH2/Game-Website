@@ -10,7 +10,7 @@ const games = [
         title: "Game 2",
         description: "Description of Game 2.",
         imageUrl: "https://images.fyndiq.se/images/f_auto/t_600x600/prod/bfc0e373d9154484/28c8f4c32151/tic-tac-toe-mini-tic-tac-toe-foam-bradspel-for-barn-birthd",
-        playUrl: "#"
+        playUrl: "/games/snake/snake.html"
     },
 ];
 
@@ -30,7 +30,6 @@ function generateGameCards() {
                 <a href="${game.playUrl}">Play Now</a>
             </div>
         `;
-
         container.appendChild(card);
     });
 }
