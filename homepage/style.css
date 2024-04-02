@@ -38,7 +38,16 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #555;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    color: black;
+}
+
+.searchbar {
+    background-color: #fff;
+    color: rgb(104, 104, 104);
+    border-radius: 2px;
+    width: 40%;
 }
 
 #game-cards-container {

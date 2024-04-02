@@ -2,15 +2,15 @@
 const games = [
     {
         title: "Tic-Tac-Toe",
-        description: "Description of Game 1.",
-        imageUrl: "https://www.youcubed.org/wp-content/uploads/2017/03/Tic-Tac-Toe-Product.jpg",
+        description: "Classic Tic-Tac-Toe",
+        imageUrl: "https://www.shutterstock.com/shutterstock/videos/1103397077/thumb/1.jpg?ip=x480",
         playUrl: "/games/gameView.html"
     },
     {
-        title: "Game 2",
-        description: "Description of Game 2.",
-        imageUrl: "https://images.fyndiq.se/images/f_auto/t_600x600/prod/bfc0e373d9154484/28c8f4c32151/tic-tac-toe-mini-tic-tac-toe-foam-bradspel-for-barn-birthd",
-        playUrl: "/games/snake/snake.html"
+        title: "Flappy Bird",
+        description: "Classic Flappy Bird",
+        imageUrl: "https://w0.peakpx.com/wallpaper/795/210/HD-wallpaper-flappy-bird-game.jpg",
+        playUrl: "/games/flappyBird/flappy.html"
     },
 ];
 

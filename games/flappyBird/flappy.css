@@ -1,0 +1,25 @@
+.mainContent {
+    display: flex;
+    justify-content: center;
+    background-color:rgb(104, 104, 104);
+    height: 50vh;
+    border-radius: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+#input {
+    height: 50%;
+    resize: none;
+    border: none;
+    background-color: rgb(42, 42, 42);
+    color: aliceblue;
+}
+
+.mainText {
+    position: absolute;
+    color: white;
+}

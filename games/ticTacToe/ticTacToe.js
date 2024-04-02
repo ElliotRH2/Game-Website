@@ -3,10 +3,11 @@ const resetButton = document.getElementById('resetButton');
 let currentPlayer = 'X';
 let boardState = ['', '', '', '', '', '', '', '', ''];
 let boardState2 = ['', '', '', '', '', '', '', '', '', '', '', '',, '', '', '', '', '']; // 4x4
+const boardSize = 9;
 
 // Initialize the game board
 function initializeBoard() {
-    for (let i = 0; i < 9; i++) {
+    for (let i = 0; i < boardSize; i++) {
         const cell = document.createElement('div');
         cell.classList.add('cell');
         cell.dataset.index = i;
