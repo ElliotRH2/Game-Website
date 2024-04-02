@@ -84,3 +84,11 @@ nav ul li a:hover {
     background-color: white;
     color: black;
 }
+
+.winText {
+    color: greenyellow;
+}
+
+.drawText {
+    color: rgb(255, 55, 55);
+}

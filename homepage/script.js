@@ -4,7 +4,7 @@ const games = [
         title: "Tic-Tac-Toe",
         description: "Classic Tic-Tac-Toe",
         imageUrl: "https://www.shutterstock.com/shutterstock/videos/1103397077/thumb/1.jpg?ip=x480",
-        playUrl: "/games/gameView.html"
+        playUrl: "/games/ticTacToe/tic.html"
     },
     {
         title: "Flappy Bird",
