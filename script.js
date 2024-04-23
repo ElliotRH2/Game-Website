@@ -10,13 +10,13 @@ const games = [
         title: "Typing Speed Test",
         description: "Test your WPM",
         imageUrl: "https://www.typingpal.com/en/typing-test/vitesse-frappe-en.png",
-        playUrl: "/games/typingTest/typingSpeed.html"
+        playUrl: "games/typingTest/typingSpeed.html"
     },
     {
         title: "Flappy Bird",
         description: "Classic Flappy Bird",
         imageUrl: "https://upload.wikimedia.org/wikipedia/en/0/0a/Flappy_Bird_icon.png",
-        playUrl: "/games/flappyBird/flappy.html"
+        playUrl: "./games/flappyBird/flappy.html"
     },
 ];
 
