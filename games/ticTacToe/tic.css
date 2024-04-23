@@ -9,6 +9,11 @@ header {
     padding: 20px 0;
 }
 
+.headerTitle {
+    color: white;
+    text-decoration: none;
+}
+
 .container {
     width: 80%;
     margin: 0 auto;

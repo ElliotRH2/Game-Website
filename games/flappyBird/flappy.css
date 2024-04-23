@@ -1,0 +1,9 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+#board {
+    /* background-color: rgb(127, 221, 255); */
+    background-image: url(/games/flappyBird/flappyPng/flappybirdbg.png);
+}

@@ -1,25 +1,100 @@
-.mainContent {
-    display: flex;
-    justify-content: center;
-    background-color:rgb(104, 104, 104);
-    height: 50vh;
-    border-radius: 10px;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #323232;
+}
+
+header {
+  background-color: #E84545;
+  color: #fff;
+  padding: 20px 0;
+  margin-bottom: 25px;
+}
+
+.headerTitle {
+  color: white;
+  text-decoration: none;
 }
 
 .container {
-    display: flex;
-    justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-#input {
-    height: 50%;
-    resize: none;
-    border: none;
-    background-color: rgb(42, 42, 42);
-    color: aliceblue;
+h1 {
+  margin: 0;
 }
 
-.mainText {
-    position: absolute;
-    color: white;
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+}
+
+nav ul li a:hover {
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+  color: black;
+}
+  
+#typing-test {
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #323232;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  user-select: none;
+}
+  
+#text-to-type {
+  margin-bottom: 20px;
+}
+  
+#input-field {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+  
+#result {
+  font-weight: bold;
+}
+
+.green-text {
+  color: green;
+}
+
+#newGame {
+  font-weight: bold;
+}
+
+#displayText {
+  color: white;
+}
+
+#inputField {
+  width: 100%;
+}
+
+#newGame, #randomMode, #fixedMode {
+  border: none;
+  border-radius: 10px;
+  font-weight: ;
+}
+  

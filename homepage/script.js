@@ -7,18 +7,26 @@ const games = [
         playUrl: "/games/ticTacToe/tic.html"
     },
     {
+        title: "Typing Speed Test",
+        description: "Test your WPM",
+        imageUrl: "https://www.typingpal.com/en/typing-test/vitesse-frappe-en.png",
+        playUrl: "/games/typingTest/typingSpeed.html"
+    },
+    {
         title: "Flappy Bird",
         description: "Classic Flappy Bird",
-        imageUrl: "https://w0.peakpx.com/wallpaper/795/210/HD-wallpaper-flappy-bird-game.jpg",
+        imageUrl: "https://upload.wikimedia.org/wikipedia/en/0/0a/Flappy_Bird_icon.png",
         playUrl: "/games/flappyBird/flappy.html"
     },
 ];
 
 // Function to generate game cards
-function generateGameCards() {
+function generateGameCards() 
+{
     const container = document.getElementById("game-cards-container");
 
-    games.forEach(game => {
+    games.forEach(game => 
+    {
         const card = document.createElement("div");
         card.classList.add("game-card");
 
