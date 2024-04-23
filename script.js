@@ -4,7 +4,7 @@ const games = [
         title: "Tic-Tac-Toe",
         description: "Classic Tic-Tac-Toe",
         imageUrl: "https://www.shutterstock.com/shutterstock/videos/1103397077/thumb/1.jpg?ip=x480",
-        playUrl: "/games/ticTacToe/tic.html"
+        playUrl: "games/ticTacToe/tic.html"
     },
     {
         title: "Typing Speed Test",
@@ -16,7 +16,7 @@ const games = [
         title: "Flappy Bird",
         description: "Classic Flappy Bird",
         imageUrl: "https://upload.wikimedia.org/wikipedia/en/0/0a/Flappy_Bird_icon.png",
-        playUrl: "./games/flappyBird/flappy.html"
+        playUrl: "games/flappyBird/flappy.html"
     },
 ];
 
