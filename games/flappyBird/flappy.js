@@ -46,7 +46,7 @@ window.onload = function()
 
     // Load images
     birdImg = new Image();
-    birdImg.src = "games/flappyBird/flappyPng/flappybird.png";
+    birdImg.src = "/games/flappyBird/flappyPng/flappybird.png";
     
     birdImg.onload = function()
     {
@@ -54,10 +54,10 @@ window.onload = function()
     }
 
     topPipeImg = new Image();
-    topPipeImg.src = "games/flappyBird/flappyPng/toppipe.png";
+    topPipeImg.src = "/games/flappyBird/flappyPng/toppipe.png";
 
     bottomPipeImg = new Image();
-    bottomPipeImg.src = "games/flappyBird/flappyPng/bottompipe.png"
+    bottomPipeImg.src = "/games/flappyBird/flappyPng/bottompipe.png"
 
     requestAnimationFrame(update);
     setInterval(placePipes, 1500); // Every 1.5 seconds
