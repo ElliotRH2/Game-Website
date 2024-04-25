@@ -44,10 +44,6 @@ window.onload = function()
     board.width = boardWidth;
     context = board.getContext("2d"); // Used for drawing on the board
 
-    // Draw bird
-    //context.fillStyle = "green"
-    //context.fillRect(bird.x, bird.y, bird.width, bird.height)
-
     // Load images
     birdImg = new Image();
     birdImg.src = "/games/flappyBird/flappyPng/flappybird.png";
@@ -168,7 +164,7 @@ function moveBird(e)
     if (e.code == "Space" || e.code == "ArrowUp" || e.code == "KeyX") 
     {
         // Jump
-        velocityY = -6;
+        velocityY = -6; // Negative value to make the bird go up
     }
 
     if (gameOver)
