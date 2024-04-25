@@ -63,6 +63,7 @@ window.onload = function()
     setInterval(placePipes, 1500); // Every 1.5 seconds
 
     document.addEventListener("keydown", moveBird);
+    document.addEventListener("click", clickMoveBird);
 }
 
 function update()
@@ -166,6 +167,21 @@ function moveBird(e)
         // Jump
         velocityY = -6; // Negative value to make the bird go up
     }
+
+    if (gameOver)
+    {
+        bird.y = birdY;
+        pipeArray = [];
+        score = 0;
+        gameOver = false;
+    }
+}
+
+// For clicking to jump (mostly for phone)
+function clickMoveBird(event)
+{
+
+    velocityY = -6; 
 
     if (gameOver)
     {
