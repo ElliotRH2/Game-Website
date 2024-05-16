@@ -7,9 +7,10 @@ header {
     background-color: #E84545;
     color: #fff;
     padding: 20px 0;
+    width: 100%;
 }
 
-.container {
+.containerHeader {
     width: 80%;
     margin: 0 auto;
     display: flex;
@@ -33,7 +34,7 @@ nav ul {
 }
 
 nav ul li {
-    display: inline;
+    display: inline;    
 }
 
 nav ul li a {
@@ -52,4 +53,18 @@ nav ul li a:hover {
     text-align: center;
     margin-top: 20px;
 }
+
+.imageContainer {
+    max-width: 20%;
+    height: auto;
+    margin: 0 auto; /* Optional: to center the image horizontally */
+}
+
+.jsImg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
 

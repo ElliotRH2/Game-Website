@@ -53,7 +53,7 @@ inputField.addEventListener("input", function()
     // The text we type in the input field is stored in the typedText variable
     typedText = inputField.value;
 
-    /*
+    /* Old code 
     displayText.innerText = typedText;
     
     // Change display text color depending if you type right or wrong

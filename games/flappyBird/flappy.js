@@ -1,9 +1,10 @@
-
 // Board
 let board;
 let boardWidth = 360;
 let boardHeight = 640;
 let context;
+
+const canvas = document.getElementById("board")
 
 let birdWidth = 34;
 let birdHeight = 24;
@@ -38,7 +39,7 @@ let gameOver = false;
 let score = 0;
 
 window.onload = function() 
-{
+{   
     board = document.getElementById("board");
     board.height = boardHeight;
     board.width = boardWidth;
@@ -92,15 +93,17 @@ function update()
     for (let i = 0; i< pipeArray.length; i++) 
     {
         let pipe = pipeArray[i];
-        pipe.x += velocityX;
+        pipe.x += velocityX; // Move pipes 
         context.drawImage(pipe.img, pipe.x, pipe.y, pipe.width, pipe.height);
 
-        if (!pipe.passed && bird.x > pipe.x + pipe.width)
+        if (!pipe.passed && bird.x > pipe.x + pipe.width) // If pipePassed is false and our bird is over the x position of the pipe, then we passed a pipe
         {
+            // Give score when we passed a pipe
             score+= 0.5; // 0.5 since we have two pipes(bottom & top) checking if we pass so we get +1 if we pass a set of pipes
             pipe.passed = true;
         }
 
+        // Use the detectCollision function and pass bird and pipe object to detect collision
         if (detectCollision(bird, pipe))
         {
             gameOver = true;
@@ -108,7 +111,7 @@ function update()
     }
 
     // Clear pipes
-    while (pipeArray.length > 0 && pipeArray[0].x < -pipeWidth) 
+    while (pipeArray.length > 0 && pipeArray[0].x < -pipeWidth) // When the first pipe in the pipe array is outside the left side of the screen
     {
         pipeArray.shift(); // Removes first element in the array
         console.log("pipe removed")
@@ -170,6 +173,7 @@ function moveBird(e)
 
     if (gameOver)
     {
+        // Reset game properties and pipe array when game over
         bird.y = birdY;
         pipeArray = [];
         score = 0;
@@ -177,7 +181,7 @@ function moveBird(e)
     }
 }
 
-// For clicking to jump (mostly for phone)
+// For clicking screen to jump (mostly for phone)
 function clickMoveBird(event)
 {
 
@@ -192,11 +196,15 @@ function clickMoveBird(event)
     }
 }
 
+// Function to detect collision between objects
 function detectCollision(a, b)
-{
+{           // Check if two objects are overlapping horizontally
     return  a.x < b.x + b.width &&
             a.x + a.width > b.x &&
+
+            // Check if two objects are overlapping vertically
             a.y < b.y + b.height &&
             a.y + a.height > b.y;
 }
-    
+
+
