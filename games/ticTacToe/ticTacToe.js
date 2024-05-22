@@ -123,7 +123,7 @@ function getWinConditions()
     winConditions.push(diagonal2);
 }
 
-// Check if there"s a win
+// Check if there's a win
 function checkWin() 
 {
     return winConditions.some(condition => // Some = If atleast one element in the win conditions is true
@@ -131,7 +131,7 @@ function checkWin()
     );
 }
 
-// Check if it"s a draw
+// Check if it's a draw
 function checkDraw() 
 {
     return boardState.every(cell => cell !== ""); // If all cells are NOT empty strings it"s a draw
