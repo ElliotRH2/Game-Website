@@ -1,9 +1,9 @@
-const board = document.getElementById('board');
-const resetButton = document.getElementById('resetButton');
-const gameTitle = document.getElementById('gameTitle')
-const changeBoard = document.getElementById('changeBoard')
+const board = document.getElementById("board");
+const resetButton = document.getElementById("resetButton");
+const gameTitle = document.getElementById("gameTitle")
+const changeBoard = document.getElementById("changeBoard")
 
-let currentPlayer = 'X';
+let currentPlayer = "X";
 let boardState = [];
 let winConditions = [];
 let boardGrid = 3;
@@ -23,18 +23,18 @@ function initializeBoard() {
 
     // Generate the cells for the board
     for (let i = 0; i < boardGrid * boardGrid; i++) {
-        boardState.push('');
+        boardState.push("");
 
-        const cell = document.createElement('div');
-        cell.classList.add('cell');
+        const cell = document.createElement("div");
+        cell.classList.add("cell");
         cell.dataset.index = i;
-        cell.addEventListener('click', handleCellClick);
+        cell.addEventListener("click", handleCellClick);
         board.appendChild(cell);
     }
 }
 
 // Toggle board size
-changeBoard.addEventListener('click', function() {
+changeBoard.addEventListener("click", function() {
     if (boardGrid === 3) 
     {
         boardGrid = 4;
@@ -55,25 +55,25 @@ changeBoard.addEventListener('click', function() {
 function handleCellClick(event) 
 {
     const cellIndex = event.target.dataset.index;
-    if (boardState[cellIndex] === '') // If a cell is empty
+    if (boardState[cellIndex] === "") // If a cell is empty
     { 
         boardState[cellIndex] = currentPlayer;
         event.target.innerText = currentPlayer; // Add the text for the current player, x or o
         if (checkWin()) 
         {
             // Instead of using alerts when game ends we update the title instead
-            gameTitle.innerText = currentPlayer + ' wins!'; 
-            gameTitle.classList.add('winText'); 
+            gameTitle.innerText = currentPlayer + " wins!"; 
+            gameTitle.classList.add("winText"); 
             setTimeout(resetGame, 1250); // Wait a bit before calling resetGame function
         } 
         else if (checkDraw()) 
         {
-            gameTitle.innerText = 'Draw!'; 
+            gameTitle.innerText = "Draw!"; 
             setTimeout(resetGame, 1250);
         } 
         else 
         {
-            currentPlayer = currentPlayer === 'X' ? 'O' : 'X'; // If current player === X it will be O and if current player !== X it will be X
+            currentPlayer = currentPlayer === "X" ? "O" : "X"; // If current player === X it will be O and if current player !== X it will be X
         }
     }
 }
@@ -123,7 +123,7 @@ function getWinConditions()
     winConditions.push(diagonal2);
 }
 
-// Check if there's a win
+// Check if there"s a win
 function checkWin() 
 {
     return winConditions.some(condition => // Some = If atleast one element in the win conditions is true
@@ -131,24 +131,24 @@ function checkWin()
     );
 }
 
-// Check if it's a draw
+// Check if it"s a draw
 function checkDraw() 
 {
-    return boardState.every(cell => cell !== ''); // If all cells are NOT empty strings it's a draw
+    return boardState.every(cell => cell !== ""); // If all cells are NOT empty strings it"s a draw
 }
 
 // Reset the game, give all default values
 function resetGame() 
 {
-    currentPlayer = 'X';
-    gameTitle.innerText = 'Tic Tac Toe';
-    gameTitle.classList.remove('winText');
+    currentPlayer = "X";
+    gameTitle.innerText = "Tic Tac Toe";
+    gameTitle.classList.remove("winText");
 
     initializeBoard();
 }
 
 // Event listener for reset button
-resetButton.addEventListener('click', resetGame); 
+resetButton.addEventListener("click", resetGame); 
 
 // Start the game
 initializeBoard();
