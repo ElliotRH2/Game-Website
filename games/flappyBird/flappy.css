@@ -24,3 +24,45 @@ body {
     z-index: 1000; /* Ensure it's above other elements */
 }
 
+.footer { 
+    position: absolute;
+    bottom: 0; 
+    left: 0; 
+    z-index: 10;
+    width: 100%;
+    height: 150;
+    background-color: rgb(38, 38, 38);
+    color: white;
+}
+
+.footerTitle {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    margin: 10px;
+    color: white;
+}
+
+.about, .github {
+    color: rgb(131, 131, 131);
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+hr {
+    width: 50%;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media (max-width: 600px) {
+    .footer {
+      visibility: hidden;
+    }
+  }
+
+
+
