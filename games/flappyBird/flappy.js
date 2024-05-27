@@ -189,7 +189,7 @@ function moveBird(e) {
     {
         bird.y = birdY;
         pipeArray = [];
-        score = 0;
+        score = 0;  
         gameOver = false;
         velocityY = 0;
         lastTimestamp = 0; // Reset the timestamp for a new game
