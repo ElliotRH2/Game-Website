@@ -38,7 +38,7 @@ let gravity = 1000; // Gravity in pixels per second squared
 let gameOver = false;
 let score = 0;
 
-// For capping the fps at 60 and checking frames
+// For capping the fps at 60 and checking frames, this is to make the game work consistent using monitors with more hertz
 const fps = 60;
 const timeStep = 1000 / fps; // 16.67ms for 60fps
 let lastTimestamp = 0;
@@ -74,22 +74,24 @@ window.onload = function()
 
 function update(timestamp) 
 {
+    // Used to initialize the first frame, in the start it will be undefined so we check when its true
     if (!lastTimestamp) 
     {
         lastTimestamp = timestamp;
     }
 
-    let deltaTime = timestamp - lastTimestamp;
-    lastTimestamp = timestamp;
-    accumulatedTime += deltaTime;
+    let deltaTime = timestamp - lastTimestamp; // Calculate difference in time between the current and previous frame and store it in variable deltaTime
+    lastTimestamp = timestamp; // Save the last frame and use it for next frame
+    accumulatedTime += deltaTime; // Add the difference (in ms) to accumulated time 
 
+    // Only update the game when accumulated time is 16.67 ms or more making it only update in 60 fps
     while (accumulatedTime >= timeStep) 
     {
         gameLoop(timeStep / 1000); // Convert timeStep to seconds
-        accumulatedTime -= timeStep;
+        accumulatedTime -= timeStep; // Remove 16.67 ms per frame from accumulatedTime
     }
 
-    requestAnimationFrame(update);
+    requestAnimationFrame(update); 
 }
 
 function gameLoop(deltaTime) 
@@ -215,6 +217,7 @@ function detectCollision(a, b)
 {
     return a.x < b.x + b.width &&
            a.x + a.width > b.x &&
+           
            a.y < b.y + b.height &&
            a.y + a.height > b.y;
 }
