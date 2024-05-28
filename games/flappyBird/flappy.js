@@ -118,9 +118,10 @@ function gameLoop(deltaTime)
     for (let i = 0; i < pipeArray.length; i++) 
     {
         let pipe = pipeArray[i];
-        pipe.x += velocityX * deltaTime;
+        pipe.x += velocityX * deltaTime; 
         context.drawImage(pipe.img, pipe.x, pipe.y, pipe.width, pipe.height);
 
+        // If pipe passed is false and birds x pos is bigger than the pipes x pos + width we will get points
         if (!pipe.passed && bird.x > pipe.x + pipe.width) 
         {
             score += 0.5;
@@ -133,10 +134,10 @@ function gameLoop(deltaTime)
         }
     }
 
-    // Clear pipes
+    // Clear pipe when it goes out of view
     while (pipeArray.length > 0 && pipeArray[0].x < -pipeWidth) 
     {
-        pipeArray.shift();
+        pipeArray.shift(); // Removes the first element in the pipe array
         console.log("pipe removed");
     }
 
