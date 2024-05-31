@@ -11,8 +11,7 @@ const randomMode = document.getElementById("randomMode")
 const fixedMode = document.getElementById("fixedMode")
 
 // Set starting values
-let fixedModeOn = false;
-let randomModeOn = true;
+let isRandomMode = "random"
 
 // Get a new text at start
 resetGame();
@@ -22,19 +21,21 @@ randomMode.style.backgroundColor = "rgb(101, 255, 74)"
 fixedMode.style.backgroundColor = "rgb(255, 43, 43)"
 
 // Toggle mode buttons
-fixedMode.addEventListener("click", function() {
-    if (!fixedModeOn) { 
-        fixedModeOn = true;
-        randomModeOn = false;
+fixedMode.addEventListener("click", function() 
+{
+    if (isRandomMode !== "fixed") 
+    { 
+        isRandomMode = "fixed"
         fixedMode.style.backgroundColor = "rgb(101, 255, 74)"
         randomMode.style.backgroundColor = "rgb(255, 43, 43)"
     }
 });
 
-randomMode.addEventListener("click", function() {
-    if (!randomModeOn) { 
-        randomModeOn = true;
-        fixedModeOn = false;
+randomMode.addEventListener("click", function() 
+{
+    if (isRandomMode !== "random") 
+    { 
+        isRandomMode = "random"
         randomMode.style.backgroundColor = "rgb(101, 255, 74)"
         fixedMode.style.backgroundColor = "rgb(255, 43, 43)"
     }
@@ -52,26 +53,6 @@ inputField.addEventListener("input", function()
 
     // The text we type in the input field is stored in the typedText variable
     typedText = inputField.value;
-
-    /* Old code 
-    displayText.innerText = typedText;
-    
-    // Change display text color depending if you type right or wrong
-    let matching = true;
-    for (let i = 0; i < typedText.length; i++) 
-    {
-        if (typedText[i] !== textToType.innerText[i])
-        {
-            matching = false;
-        }
-    }
-
-    if (matching) {
-        displayText.style.color = "green";
-    } else {
-        displayText.style.color = "red";
-    } 
-    */
 
    const greenColor = "rgb(101, 255, 74)"
    const redColor = "rgb(255, 43, 43)"
@@ -105,7 +86,7 @@ inputField.addEventListener("input", function()
 function resetGame() 
 {
     // Make a new text depending on what mode you are playing
-    if (randomModeOn)
+    if (isRandomMode === "random")
     {
         // Method to generate random sentences by picking a random word in every array and returning them
         function generateRandomSentence() 
